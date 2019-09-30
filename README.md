@@ -46,13 +46,13 @@ HTTP ADDRESS: #######
 
 	On you virtual machine:
 	```
-	$ su - grader
+	$ su  grader
 	$ mkdir .ssh
-	$ touch .ssh/authorized_keys
-	$ vim .ssh/authorized_keys
+	$ sudo nano .ssh/authorized_keys
 	```
 	Copy the public key generated on your local machine to this file and save
 	```
+  $ sudo chown grader .ssh
 	$ chmod 700 .ssh
 	$ chmod 644 .ssh/authorized_keys
 	```
@@ -60,7 +60,7 @@ HTTP ADDRESS: #######
 3. reload SSH using `service ssh restart`
 4. now you can use ssh to login with the new user you created
 
-	`ssh -i [privateKeyFilename] grader@52.24.125.52`
+	`ssh -i [privateKeyFilename] -p 22 grader@3.88.117.25`
 
 ## Update all currently installed packages
 
