@@ -32,13 +32,13 @@ HTTP ADDRESS: #######
 	```ssh -i ~/.ssh/key grader@3.88.117.25```
 4. Type the Passphrase:
   ```inter123```
-5. Development Environment Information
 
-## Create a new user named grader
-1. `sudo adduser grader`
-2. `vim /etc/sudoers`
-3. `touch /etc/sudoers.d/grader`
-4. `vim /etc/sudoers.d/grader`, type in `grader ALL=(ALL:ALL) ALL`, save and quit
+## Create a new user
+1. ```sudo adduser grader```
+2. ```sudo nano /etc/sudoers.d/grader``
+4. type in
+  ```grader ALL=(ALL:ALL) ALL````
+5.  save and quit
 
 ## Set ssh login using keys
 1. generate keys on local machine using`ssh-keygen` ; then save the private key in `~/.ssh` on local machine
