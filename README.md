@@ -46,20 +46,20 @@ HTTP ADDRESS: #######
 
 	On you virtual machine:
 
-  ```
-  $ su  grader
-	$ mkdir .ssh
-	$ sudo nano .ssh/authorized_keys
+  `$ su  grader`
 
-  ```
+	`$ mkdir .ssh`
+
+	`$ sudo nano .ssh/authorized_keys`
+
 	Copy the public key generated on your local machine to this file and save
 
-	```
-  $ sudo chown grader .ssh
-	$ chmod 700 .ssh
-	$ chmod 644 .ssh/authorized_keys
+	`$ sudo chown grader .ssh`
 
-  ```
+	`$ chmod 700 .ssh`
+
+	`$ chmod 644 .ssh/authorized_keys`
+
 
 3. reload SSH using `service ssh restart`
 4. now you can use ssh to login with the new user you created
