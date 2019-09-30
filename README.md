@@ -51,8 +51,8 @@ HTTP ADDRESS: #######
 	$ sudo nano .ssh/authorized_keys
 	```
 	Copy the public key generated on your local machine to this file and save
-  
-	```  $ sudo chown grader .ssh
+
+	```$ sudo chown grader .ssh
 	$ chmod 700 .ssh
 	$ chmod 644 .ssh/authorized_keys
 	```
