@@ -29,16 +29,10 @@ HTTP ADDRESS: #######
 1. Download Private Key [here](https://drive.google.com/open?id=1D68yL0jylTFDiywWLQM-zZrW1UAj0qsx)
 2. Put the private key file into the folder `~/.ssh` (in your local machine).
 3. In your terminal:
-	```chmod 600 ~/.ssh/uKey.rsa```
-4. In your terminal, type in
-	```ssh -i ~/.ssh/udacity_key.rsa root@52.24.125.52```
+	```ssh -i ~/.ssh/key grader@3.88.117.25```
+4. Type the Passphrase:
+  ```inter123```
 5. Development Environment Information
-
-	Public IP Address
-
-	52.24.125.52
-
-	Private Key ( is not provided here. )
 
 ## Create a new user named grader
 1. `sudo adduser grader`
