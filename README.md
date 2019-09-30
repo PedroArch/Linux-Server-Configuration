@@ -46,7 +46,7 @@ HTTP ADDRESS: #######
 
 	On you virtual machine:
   ```
-  $ su  grader
+    $ su  grader
 	$ mkdir .ssh
 	$ sudo nano .ssh/authorized_keys
   ```
@@ -55,7 +55,7 @@ HTTP ADDRESS: #######
 
   ```
 	$ sudo chown grader .ssh
-  $ chmod 700 .ssh
+    $ chmod 700 .ssh
 	$ chmod 644 .ssh/authorized_keys
   ```
 
