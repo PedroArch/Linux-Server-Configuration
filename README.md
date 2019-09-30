@@ -35,7 +35,7 @@ HTTP ADDRESS: #######
 
 ## Create a new user
 1. ```sudo adduser grader```
-2. ```sudo nano /etc/sudoers.d/grader``
+2. ```sudo nano /etc/sudoers.d/grader```
 4. type in
   ```grader ALL=(ALL:ALL) ALL````
 5.  save and quit
