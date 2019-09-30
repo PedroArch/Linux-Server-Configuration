@@ -29,36 +29,35 @@ HTTP ADDRESS: #######
 1. Download Private Key [here](https://drive.google.com/open?id=1D68yL0jylTFDiywWLQM-zZrW1UAj0qsx)
 2. Put the private key file into the folder `~/.ssh` (in your local machine).
 3. In your terminal:
-	```ssh -i ~/.ssh/key grader@3.88.117.25```
+	`ssh -i ~/.ssh/key grader@3.88.117.25`
 4. Type the Passphrase:
-  ```inter123```
+  `inter123`
 
 ## Create a new user
-1. ```sudo adduser grader```
-2. ```sudo nano /etc/sudoers.d/grader```
+1. `sudo adduser grader`
+2. `sudo nano /etc/sudoers.d/grader`
 4. type in
-  ```grader ALL=(ALL:ALL) NOPASSWD:ALL```
+  `grader ALL=(ALL:ALL) NOPASSWD:ALL`
 5.  save and quit
 
 ## Set ssh login using keys
-1. generate keys on local machine using ```ssh-keygen``` ; then save the private key in ```~/.ssh``` on local machine
+1. generate keys on local machine using `ssh-keygen` ; then save the private key in `~/.ssh` on local machine
 2. deploy public key on developement enviroment
 
 	On you virtual machine:
-
-  `$ su  grader`
-
-	`$ mkdir .ssh`
-
-	`$ sudo nano .ssh/authorized_keys`
+  ```
+  $ su  grader
+	$ mkdir .ssh
+	$ sudo nano .ssh/authorized_keys
+  ```
 
 	Copy the public key generated on your local machine to this file and save
 
-	`$ sudo chown grader .ssh`
-
-	`$ chmod 700 .ssh`
-
-	`$ chmod 644 .ssh/authorized_keys`
+  ```
+	$ sudo chown grader .ssh
+  $ chmod 700 .ssh
+	$ chmod 644 .ssh/authorized_keys
+  ```
 
 
 3. reload SSH using `service ssh restart`
