@@ -41,18 +41,20 @@ HTTP ADDRESS: #######
 5.  save and quit
 
 ## Set ssh login using keys
-1. generate keys on local machine using`ssh-keygen` ; then save the private key in `~/.ssh` on local machine
+1. generate keys on local machine using ```ssh-keygen``` ; then save the private key in ```~/.ssh``` on local machine
 2. deploy public key on developement enviroment
 
 	On you virtual machine:
 
-  ```	$ su  grader
+  ```
+  $ su  grader
 	$ mkdir .ssh
 	$ sudo nano .ssh/authorized_keys
 	```
 	Copy the public key generated on your local machine to this file and save
 
-	```$ sudo chown grader .ssh
+	```
+  $ sudo chown grader .ssh
 	$ chmod 700 .ssh
 	$ chmod 644 .ssh/authorized_keys
 	```
