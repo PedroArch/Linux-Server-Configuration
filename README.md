@@ -1,25 +1,27 @@
 # Linux-Server-Configuration-UDACITY
-This is the fifth project for "Full Stack Web Developer Nanodegree" on Udacity.
+Linux Configuration Project
 
-In this project, a Linux virtual machine needs to be configurated to support the Item Catalog website.
+> In this project, a Linux virtual machine needs to be configurated to support the Item Catalog website.
 
-IP ADDRESS: 18.216.71.137
-HTTP ADDRESS: http://ec2-18-216-71-137.compute-1.amazonaws.com/
+IP ADDRESS: 3.88.117.25
+HTTP ADDRESS: #######
 
 ## Tasks
-1. Launch your Virtual Machine with your Udacity account
-2. Follow the instructions provided to SSH into your server
-3. Create a new user named grader
-4. Give the grader the permission to sudo
-5. Update all currently installed packages
-6. Change the SSH port from 22 to 2200
+1. Get a server (I used Amazon Lightsail)
+2. Secure the server
+    * Update and Upgrade all packages
+    * Change the SHH port from 22 to 2200
+    * Configure the UFW to only allow incomig connections for SSH, HTTP, NTP
+4. Give the grader acess with sudo
+5. Configure the local timezone to UTC
+6. Install and configure Apache to serve a Python mod_wsgi application
 7. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
 8. Configure the local timezone to UTC
 9. Install and configure Apache to serve a Python mod_wsgi application
-10. Install and configure PostgreSQL:
-	- Do not allow remote connections
-	- Create a new user named catalog that has limited permissions to your catalog application database
-11. Install git, clone and setup your Catalog App project (from your GitHub repository from earlier in the Nanodegree program) so that it functions correctly when visiting your server’s IP address in a browser. Remember to set this up appropriately so that your .git directory is not publicly accessible via a browser!
+10. Install and configure PostgreSQL
+	 * Do not allow remote connections
+	 * Create a new user named catalog that has limited permissions to your catalog application database
+11. Deploy the Item Catalog project
 
 ## Launch Virtual Machine
 
