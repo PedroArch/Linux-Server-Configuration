@@ -27,10 +27,9 @@ HTTP ADDRESS: #######
 
 ## Instructions for SSH access to the instance
 1. Download Private Key [here](https://drive.google.com/open?id=1D68yL0jylTFDiywWLQM-zZrW1UAj0qsx)
-2. Move the private key file into the folder `~/.ssh` (where ~ is your environment's home directory). So if you downloaded the file to the Downloads folder, just execute the following command in your terminal.
-	```mv ~/Downloads/udacity_key.rsa ~/.ssh/```
-3. Open your terminal and type in
-	```chmod 600 ~/.ssh/udacity_key.rsa```
+2. Put the private key file into the folder `~/.ssh` (in your local machine).
+3. In your terminal:
+	```chmod 600 ~/.ssh/uKey.rsa```
 4. In your terminal, type in
 	```ssh -i ~/.ssh/udacity_key.rsa root@52.24.125.52```
 5. Development Environment Information
