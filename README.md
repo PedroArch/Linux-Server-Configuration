@@ -114,29 +114,30 @@ HTTP ADDRESS: #######
 	```
 7. Exit from user "postgres" type `exit`
 
-## Install git, clone and setup your Catalog App project.
+## Install git and deploying Catalog App project.
 1. Install Git using `sudo apt-get install git`
-2. Use `cd /var/www` to move to the /var/www directory
+2. Use `cd /var/www`
 3. Create the application directory `sudo mkdir FlaskApp`
 4. Move inside this directory using `cd FlaskApp`
-5. Clone the Catalog App to the virtual machine `git clone https://github.com/kongling893/Item_Catalog_UDACITY.git`
+5. Clone the Catalog App to the virtual machine `git clone https://github.com/PedroArch/bookstore-catalog.git
 6. Rename the project's name `sudo mv ./Item_Catalog_UDACITY ./FlaskApp`
-7. Move to the inner FlaskApp directory using `cd FlaskApp`
-8. Rename `website.py` to `__init__.py` using `sudo mv website.py __init__.py`
-9. Edit `database_setup.py`, `website.py` and `functions_helper.py` and change `engine = create_engine('sqlite:///toyshop.db')` to `engine = create_engine('postgresql://catalog:password@localhost/catalog')`
+7. Use `cd FlaskApp`
+8. Rename `application.py` to `__init__.py` using `sudo mv application.py __init__.py`
+9. Edit `database_setup.py`, `__init__.py` and change `engine = create_engine('sqlite:///bookstorecatalog.db')` to `engine = create_engine('postgresql://catalog:password@localhost/catalog')`
 10. Install pip `sudo apt-get install python-pip`
 11. Use pip to install dependencies `sudo pip install -r requirements.txt`
 12. Install psycopg2 `sudo apt-get -qqy install postgresql python-psycopg2`
 13. Create database schema `sudo python database_setup.py`
+14. Filling the tables `sudo python lotsofbooks.py`
 
 ## Configure and Enable a New Virtual Host
 1. Create FlaskApp.conf to edit: `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
-2. Add the following lines of code to the file to configure the virtual host.
+2. Add the following lines
 
 	```
 	<VirtualHost *:80>
-		ServerName ec2-18-216-71-137.compute-1.amazonaws.com
-		ServerAdmin danielpaladar@gmail.com
+		ServerName 3.88.117.25
+		ServerAdmin pedrofrancocarvalho@gmail.com
 		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
 		<Directory /var/www/FlaskApp/FlaskApp/>
 			Order allow,deny
@@ -155,13 +156,12 @@ HTTP ADDRESS: #######
 3. Enable the virtual host with the following command: `sudo a2ensite FlaskApp`
 
 ## Create the .wsgi File
-1. Create the .wsgi File under /var/www/FlaskApp:
+1. Create the .wsgi File
 
 	```
-	cd /var/www/FlaskApp
-	sudo nano flaskapp.wsgi
+	sudo nano /var/www/FlaskApp/flaskapp.wsgi
 	```
-2. Add the following lines of code to the flaskapp.wsgi file:
+2. Add the following lines:
 
 	```
 	#!/usr/bin/python
@@ -171,11 +171,32 @@ HTTP ADDRESS: #######
 	sys.path.insert(0,"/var/www/FlaskApp/")
 
 	from FlaskApp import app as application
-	application.secret_key = 'Add your secret key'
+	application.secret_key = 'super_secret_key'
 	```
 
 ## Restart Apache
-1. Restart Apache `sudo service apache2 restart `
+ Restart Apache `sudo service apache2 restart `
+
+## Meta
+
+Pedro Carvalho – [@PedrArch](https://twitter.com/PedroArch) – pedrofrancocarvalho@gmail.com
+
+[https://github.com/PedroArch](https://github.com/PedroArch/)
+
+## Contributing
+
+1. Fork it (<https://github.com/PedroArch/Linux-Server-Configuration/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+[twitter]:https://twitter.com/PedroArch
+[github]:https://github.com/PedroArch
+[email]: pedrofrancocarvalho@gmail.com
 
 ## References:
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+
+https://github.com/jungleBadger/-nanodegree-linux-server/blob/master/README.md
