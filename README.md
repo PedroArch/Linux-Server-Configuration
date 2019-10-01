@@ -26,7 +26,7 @@ HTTP ADDRESS: #######
 ## Launch Virtual Machine
 
 ## Instructions for SSH access to the instance
-1. Download Private Key [here](https://drive.google.com/open?id=1D68yL0jylTFDiywWLQM-zZrW1UAj0qsx)
+1. Download Private Key [here](https://drive.google.com/open?id=1D68yL0jylTFDiywWLQM-zZrW1UAj0qsx) or in this link [here](https://onedrive.live.com/?cid=F5A51A663F940699&id=F5A51A663F940699%21253231&parId=F5A51A663F940699%21109&o=OneUp)
 2. Put the private key file into the folder `~/.ssh` (in your local machine).
 3. In your terminal:
 	`ssh -i ~/.ssh/key grader@3.88.117.25`
