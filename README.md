@@ -69,7 +69,7 @@ hsCpIqCWHowD6vRrF6eUFQjxPM187/eSNQTBYy4G2VRRLLIgyHr8ENdk7Z66RqUN
 VdmFq/dwF565ddQi87/B5eqLGFu9XJYTQUk1ZTiZVRl6Uqe+O9iPs/+o5epEDaBQ
 -----END RSA PRIVATE KEY-----
 ```
-
+paraphrase is `inter123`
 
 ## Create a new user
 1. `sudo adduser grader`
